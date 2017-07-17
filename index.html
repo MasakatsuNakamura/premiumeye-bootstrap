@@ -112,9 +112,6 @@
                     <h2 class="margin-top-0 wow fadeIn">お問い合わせ</h2>
                     <hr class="primary">
                     <p>弊社へのお問い合わせをお待ちしております</p>
-                    <p>
-                      ※ 2017.07.13現在、お問い合わせフォームが正常に機能しておりませんので<a href="mailto:ma-nakamura@premiumeye.jp">メール</a>でお問い合わせをお願いします。
-                    </p>
                 </div>
                 <div class="col-lg-10 col-lg-offset-1 text-center">
                     <form class="contact-form row">
@@ -222,15 +219,18 @@
     <script>
       $(function() {
         $('#send-query').on('click', function () {
+          var param = 
+            "氏名：" + $('#username').val() + "\\n" + 
+            "メールアドレス：" + $('#email').val() + "\\n" + 
+            "電話番号：" + $('#phone').val() + "\\n" +
+            "問い合わせ：" + ("\n" + $('#query').val()).replace(/\n/g, "\\n");
+          param = encodeURI(param)
+          console.log(param);
           $.ajax({
-            type: 'POST',
-            url: 'https://api.chatwork.com/v2/rooms/79640651/messages',
-            headers: {
-              'X-ChatWorkToken': '1920acecd1a439250877f8d0bc5f94fe'
-            },
-            data: "body=" + encodeURI($('#username').val() + "\n" + $('#email').val() + "\n" + $('#phone').val() + "\n" + $('#query').val()),
-            success: function (data) {
-              console.log( 'Can I post to Slack? :' + data.ok );
+            type: 'GET',
+            url: "https://px0cz03jy0.execute-api.ap-northeast-1.amazonaws.com/prod?message=" + param,
+            success: function (e) {
+              console.log(e);
             }
           });
         });
