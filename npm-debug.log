@@ -1,0 +1,79 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\Nodist\\v-x64\\6.10.2\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\Nodist\\npmv\\4.0.5\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'jshint' ]
+2 info using npm@4.0.5
+3 info using node@v6.10.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData jshint
+8 silly fetchNamedPackageData jshint
+9 silly mapToRegistry name jshint
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'jshint',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'jshint',
+12 silly mapToRegistry   name: 'jshint',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/jshint
+14 verbose request uri https://registry.npmjs.org/jshint
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 14:15:19
+17 verbose request id 91b9c52af900d705
+18 http request GET https://registry.npmjs.org/jshint
+19 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy9.scsk-kyushu.co.jp proxy9.scsk-kyushu.co.jp:8080
+20 info attempt registry request try #2 at 14:15:29
+21 http request GET https://registry.npmjs.org/jshint
+22 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy9.scsk-kyushu.co.jp proxy9.scsk-kyushu.co.jp:8080
+23 info attempt registry request try #3 at 14:16:29
+24 http request GET https://registry.npmjs.org/jshint
+25 silly fetchPackageMetaData Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy9.scsk-kyushu.co.jp proxy9.scsk-kyushu.co.jp:8080
+25 silly fetchPackageMetaData     at ClientRequest.onError (C:\Program Files (x86)\Nodist\npmv\4.0.5\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+25 silly fetchPackageMetaData     at ClientRequest.g (events.js:291:16)
+25 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+25 silly fetchPackageMetaData     at ClientRequest.emit (events.js:188:7)
+25 silly fetchPackageMetaData     at Socket.socketErrorListener (_http_client.js:309:9)
+25 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+25 silly fetchPackageMetaData     at Socket.emit (events.js:188:7)
+25 silly fetchPackageMetaData     at connectErrorNT (net.js:1025:8)
+25 silly fetchPackageMetaData     at _combinedTickCallback (internal/process/next_tick.js:80:11)
+25 silly fetchPackageMetaData     at process._tickCallback (internal/process/next_tick.js:104:9)
+25 silly fetchPackageMetaData  error for jshint { Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND proxy9.scsk-kyushu.co.jp proxy9.scsk-kyushu.co.jp:8080
+25 silly fetchPackageMetaData     at ClientRequest.onError (C:\Program Files (x86)\Nodist\npmv\4.0.5\node_modules\request\node_modules\tunnel-agent\index.js:176:17)
+25 silly fetchPackageMetaData     at ClientRequest.g (events.js:291:16)
+25 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+25 silly fetchPackageMetaData     at ClientRequest.emit (events.js:188:7)
+25 silly fetchPackageMetaData     at Socket.socketErrorListener (_http_client.js:309:9)
+25 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+25 silly fetchPackageMetaData     at Socket.emit (events.js:188:7)
+25 silly fetchPackageMetaData     at connectErrorNT (net.js:1025:8)
+25 silly fetchPackageMetaData     at _combinedTickCallback (internal/process/next_tick.js:80:11)
+25 silly fetchPackageMetaData     at process._tickCallback (internal/process/next_tick.js:104:9) code: 'ECONNRESET' }
+26 silly rollbackFailedOptional Starting
+27 verbose stack TypeError: Cannot read property 'path' of null
+27 verbose stack     at Object.Installer.rollbackFailedOptional (C:\Program Files (x86)\Nodist\npmv\4.0.5\lib\install.js:505:29)
+27 verbose stack     at Array.<anonymous> (C:\Program Files (x86)\Nodist\npmv\4.0.5\node_modules\slide\lib\bind-actor.js:15:8)
+27 verbose stack     at LOOP (C:\Program Files (x86)\Nodist\npmv\4.0.5\node_modules\slide\lib\chain.js:15:14)
+27 verbose stack     at C:\Program Files (x86)\Nodist\npmv\4.0.5\node_modules\slide\lib\chain.js:18:7
+27 verbose stack     at C:\Program Files (x86)\Nodist\npmv\4.0.5\lib\install.js:331:5
+27 verbose stack     at Array.<anonymous> (C:\Program Files (x86)\Nodist\npmv\4.0.5\node_modules\slide\lib\bind-actor.js:15:8)
+27 verbose stack     at LOOP (C:\Program Files (x86)\Nodist\npmv\4.0.5\node_modules\slide\lib\chain.js:15:14)
+27 verbose stack     at chain (C:\Program Files (x86)\Nodist\npmv\4.0.5\node_modules\slide\lib\chain.js:20:5)
+27 verbose stack     at C:\Program Files (x86)\Nodist\npmv\4.0.5\lib\install.js:288:5
+27 verbose stack     at C:\Program Files (x86)\Nodist\npmv\4.0.5\node_modules\slide\lib\chain.js:16:22
+28 verbose cwd C:\Users\Masakatsu_Nakamura\premiumeye-bootstrap
+29 error Windows_NT 6.1.7601
+30 error argv "C:\\Program Files (x86)\\Nodist\\v-x64\\6.10.2\\node.exe" "C:\\Program Files (x86)\\Nodist\\npmv\\4.0.5\\bin\\npm-cli.js" "install" "-g" "jshint"
+31 error node v6.10.2
+32 error npm  v4.0.5
+33 error Cannot read property 'path' of null
+34 error If you need help, you may report this error at:
+34 error     <https://github.com/npm/npm/issues>
+35 verbose exit [ 1, true ]
